@@ -45,8 +45,7 @@ nav {
   text-align: center;
   padding: 100px 20px 70px;
   background: 
-    linear-gradient(180deg, rgba(232,242,246,0.9) 0%, rgba(249,249,247,0.9) 100%),
-    url('assets/img/hero-bg.jpg') center/cover no-repeat;
+    linear-gradient(180deg, rgba(232,242,246,0.9) 0%, rgba(249,249,247,0.9) 100%);
 }
 
 #home img {
@@ -230,18 +229,16 @@ footer {
   }
 
   nav {
-    flex-direction: column;
     text-align: center;
   }
 
   .nav-btn {
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;;
   }
 
   .nav-btn a {
-    margin: 8px 0;
+    font-size: 1.3rem;
   }
 
   #home h1 {
