@@ -12,20 +12,20 @@ body {
   line-height: 1.7;
 }
 
-nav {
+.site-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px 55px;
+  padding: 16px 28px;
   position: sticky;
   top: 0;
-  z-index: 90;
+  z-index: 9999; /* stay above page content */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .navlogo {
-  height: 32px;
+  height: 52px;
 }
 
 .nav-btn a {
@@ -191,7 +191,7 @@ h3 {
 }
 
 #contact {
-  background-color: #f0f4f8;
+  background: linear-gradient(180deg, rgba(232,242,246,0.9) 0%, rgba(249,249,247,0.9) 100%);
   text-align: center;
 }
 
@@ -214,6 +214,28 @@ textarea {
   height: 120px;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(43, 76, 126, 0.08); /* Slight hover highlight */
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #2b4c7e; /* same color as your nav links */
+  border-radius: 3px;
+}
+
 footer {
   background-color: #2b4c7e;
   color: white;
@@ -223,25 +245,42 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .feature-grid {
-    flex-direction: column;
-    align-items: center;
+  .hamburger {
+    display: flex;
   }
 
   nav {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
   }
 
   .nav-btn {
-    margin-top: 10px;
-    display: inline-block;;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    width: 200px;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .nav-btn.active {
+    display: flex;
   }
 
   .nav-btn a {
-    font-size: 1.3rem;
-  }
-
-  #home h1 {
-    font-size: 2rem;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    padding: 4px 0;
   }
 }
