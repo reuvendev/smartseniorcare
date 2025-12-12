@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Set character encoding -->
   <meta charset="utf-8">
+  <!-- Make the site responsive on mobile -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/img/SmartSeniorCareLogo.png">
+  <!-- Website icon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/SmartSeniorCareLogo.png">
   <title>Smart Senior Care Platform</title>
+  <!-- Link to external CSS (versioned for cache refresh) -->
   <link rel="stylesheet" href="css/style.css?v=2.1">
 </head>
 
 <body>
-    <nav class="site-nav">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="site-nav">
+      <!-- Logo -->
       <img class="navlogo" src="assets/img/SmartSeniorCareLogo.png" alt="Smart Senior Care Logo">
 
+      <!-- Hamburger menu for mobile -->
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
+      <!-- Navigation links -->
       <div class="nav-btn" id="navMenu">
         <a href="#home">Home</a>
-        <a href="#features">Features</a>
+        <div class="dropdown">
+          <a href="#features" class="drop-btn">Features ▾</a>
+          <div class="dropdown-menu">
+            <a href="#healthmanagement">Health Management</a>
+            <a href="#medicationsupport">Medication Support</a>
+            <a href="#communicationtool">Communication Tools</a>
+          </div>
+        </div>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#team">Team</a>
       </div>
-    </nav>
+  </nav>
 
-
+  <!-- HOME SECTION -->
   <section id="home">
     <img src="assets/img/SmartSeniorCareLogo.png" alt="Smart Senior Care Logo">
     <h1>Smart Senior Care</h1>
@@ -35,44 +52,55 @@
       Integrating telehealth, wearable devices, smart sensors, and AI companions, it offers continuous
       support and peace of mind for both seniors and their families.
     </p>
+
+    <!-- Button scrolls to Features section -->
     <a href="#features" class="button">Explore Features</a>
   </section>
 
+  <!-- FEATURES SECTION -->
   <section id="features">
     <div class="center">
       <h2>Key Features</h2>
+
+      <!-- Grid for feature cards -->
       <div class="feature-grid">
-        <div class="feature-box">
-          <img class="icons" src="assets/img/PersonalizedHealthManagement.jpg" alt="Personalized Health Management">
+
+        <!-- Feature 1 -->
+        <div id="healthmanagement" class="feature-box">
           <h3>Personalized Health Management</h3>
-          <p>Track and manage seniors’ health easily with smart tools.</p>
-          <img class="ui-img" src="assets/img/HealthManagementUI.png">
+          <img class="ui-img" src="assets/img/HealthManagement_mockup.png">
         </div>
 
-        <div class="feature-box">
-          <img class="icons" src="assets/img/MedicationSupport.jpg" alt="Medication Adherence Support">
+        <!-- Feature 2 -->
+        <div id="medicationsupport" class="feature-box">
           <h3>Medication Adherence Support</h3>
-          <p>Reminders and alerts for safe, timely medication intake.</p>
-          <img class="ui-img" src="assets/img/MedicationReminderUI.png">
+          <img class="ui-img" src="assets/img/MedicationReminder_mockup.png">
         </div>
 
-        <div class="feature-box">
-          <img class="icons" src="assets/img/EasyCommunicationTools.jpg" alt="Easy Communication Tools">
-          <h3>Easy Communication Tools</h3>
-          <p>Simple chat and video calls to stay connected with loved ones.</p>
-          <img class="ui-img" src="assets/img/ChatUI.png">
+        <!-- Feature 3 -->
+        <div id="communicationtool" class="feature-box">
+          <h3>Easy Communication <br> Tools</h3>
+          <img class="ui-img" src="assets/img/CommunicationTool_mockup.png">
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ---------- ABOUT SECTION ---------- -->
   <section id="about" class="center">
     <h2>About Smart Senior Care</h2>
-    <p>Smart Senior Care is designed to improve the lives of seniors by combining technology and compassion. We aim to empower older adults to live independently while staying connected with their loved ones and caregivers.</p>
+    <p>
+      Smart Senior Care is designed to improve the lives of seniors by combining technology and compassion.
+      We aim to empower older adults to live independently while staying connected with their loved ones and caregivers.
+    </p>
   </section>
 
+  <!-- ---------- CONTACT SECTION ---------- -->
   <section id="contact" class="center">
     <h2>Contact Us</h2>
+
+    <!-- Contact form -->
     <p>For questions or feedback, please reach out to our support team.</p>
     <form>
       <input type="text" placeholder="Your Name" required>
@@ -82,46 +110,60 @@
     </form>
   </section>
 
+  <!-- TEAM SECTION -->
   <section id="team">
     <div class="center">
-      <h2>Developed by Students</h2>
+      <h2>Team</h2>
+
+      <!-- Team grid -->
       <div class="team-grid">
 
+        <!-- Team Member 1 -->
         <div class="team-box">
           <img src="assets/img/team/ashley.jpg" alt="Ashley Nicole Lacasandile">
           <h3 style="font-size: 16px">Ashley Nicole N. Lacasandile</h3>
           <p>UI/UX</p>
         </div>
 
+        <!-- Team Member 2 -->
         <div class="team-box">
           <img src="assets/img/team/reuven.jpg" alt="Reuven B. Jimenez">
           <h3 style="font-size: 18px">Reuven B. Jimenez</h3>
           <p>Lead Developer</p>
         </div>
 
+        <!-- Team Member 3 -->
         <div class="team-box">
           <img src="assets/img/team/sire.jpg" alt="Sire Aldrin C. Abud">
           <h3 style="font-size: 18px">Sire Aldrin C. Abud</h3>
           <p>Developer</p>
         </div>
 
+        <!-- Team Member 4 -->
         <div class="team-box">
-          <img src="assets/img/team/craine.jpg" alt="Ashley Nicole Lacasandile">
+          <img src="assets/img/team/craine.jpg" alt="Arzue Craine P. Quiming">
           <h3 style="font-size: 18px">Arzue Craine P. Quiming</h3>
           <p>Developer</p>
         </div>
 
+        <!-- Team Member 5 -->
         <div class="team-box">
-          <img src="assets/img/team/khenn.jpg" alt="Ashley Nicole Lacasandile">
+          <img src="assets/img/team/khenn.jpg" alt="Khenn Aeron Deguil">
           <h3 style="font-size: 18px">Khenn Aeron Deguil</h3>
           <p>Developer</p>
         </div>
+
       </div>
   </section>
 
+  <!-- FOOTER  -->
   <footer>
     <p>&copy; 2025 Smart Senior Care Platform. All rights reserved.</p>
   </footer>
+
 </body>
-<script src="scripts/scripts.js" ></script>
+
+<!-- External JavaScript file -->
+<script src="scripts/scripts.js"></script>
+
 </html>

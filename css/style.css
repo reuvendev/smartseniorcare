@@ -1,4 +1,4 @@
-
+ /* Reset defaults + base font */
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +6,23 @@
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* Body styling */
 body {
   background-color: #f9f9f7;
   color: #333;
   line-height: 1.7;
 }
 
+/* Navigation bar */
 .site-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background: #fff;
   padding: 16px 28px;
-  position: sticky;
+  position: sticky; /* stays on top when scrolling */
   top: 0;
-  z-index: 9999; /* stay above page content */
+  z-index: 9999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
@@ -28,24 +30,26 @@ body {
   height: 52px;
 }
 
+
+/* Nav links */
 .nav-btn a {
   margin: 0 15px;
-  text-decoration: none;
   color: #2b4c7e;
   font-weight: 600;
-  transition: color 0.3s ease;
   font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .nav-btn a:hover {
   color: #6da5c0;
 }
 
+/* Home section */
 #home {
   text-align: center;
   padding: 100px 20px 70px;
-  background: 
-    linear-gradient(180deg, rgba(232,242,246,0.9) 0%, rgba(249,249,247,0.9) 100%);
+  background: linear-gradient(180deg, rgba(232,242,246,0.9), rgba(249,249,247,0.9));
 }
 
 #home img {
@@ -64,27 +68,24 @@ body {
   max-width: 650px;
   margin: 0 auto 30px;
   color: #444;
-  font-size: 1.1rem;
 }
 
+/* Buttons */
 .button {
-  background-color: #2b4c7e;
+  background: #2b4c7e;
   color: #fff;
-  border: none;
   padding: 15px 40px;
   border-radius: 50px;
-  font-size: 1.0rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  display: inline-block;
   text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
 .button:hover {
-  background-color: #6da5c0;
+  background: #6da5c0;
 }
 
-
+/* General section layout */
 section {
   padding: 70px 20px;
 }
@@ -99,41 +100,44 @@ h2 {
   margin-bottom: 40px;
 }
 
+/* Features section */
 #features {
-  background-color: #f0f4f8;
+  background: #f0f4f8;
   text-align: center;
 }
 
+/* Responsive grid */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
+/* Feature card */
 .feature-box {
-  background-color: white;
-  text-align: center;
+  background: white;
   padding: 15px;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
 .feature-box img {
   width: 100%;
-  height: auto;
-  display: block;
   object-fit: cover;
 }
 
 .feature-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
+/* UI preview images */
 .ui-img {
   margin-top: 10px;
   border-radius: 8px;
 }
 
+/* Feature icons */
 .icons {
   max-width: 120px;
   margin: 0 auto 10px;
@@ -142,65 +146,43 @@ h2 {
 h3 {
   color: #2b4c7e;
   margin-bottom: 10px;
-  font-size: 1.3rem;
 }
 
+/* Feature description text */
 .feature-box p {
-  text-align: center;       
   max-width: 250px;
   margin: 10px auto;
   color: #444;
-  font-size: 1rem;
 }
 
-.feature-btn {
-  display: inline-block;
-  background-color: #2b4c7e;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 10px;
-  transition: background 0.3s ease;
-}
-
-.feature-btn:hover {
-  background-color: #6da5c0;
-}
-
+/* Benefits section */
 .benefits-section ul {
   list-style: none;
-  padding: 0;
-  margin: 0 auto;
   max-width: 700px;
-  text-align: left;
+  margin: 0 auto;
 }
 
 .benefits-section li {
-  background: #ffffff;
-  margin-bottom: 12px;
+  background: #fff;
   padding: 18px 22px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  font-size: 1.05rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
+/* About section */
 #about {
-  background-color: #eef5f7;
-  text-align: center;
+  background: #eef5f7;
 }
 
 #about p {
   max-width: 750px;
   margin: 0 auto;
   color: #444;
-  font-size: 1.1rem;
 }
 
+/* Contact section */
 #contact {
-  background: linear-gradient(180deg, rgba(232,242,246,0.9) 0%, rgba(249,249,247,0.9) 100%);
-  text-align: center;
+  background: linear-gradient(180deg, rgba(232,242,246,0.9), rgba(249,249,247,0.9));
 }
 
 form {
@@ -208,13 +190,12 @@ form {
   margin: 0 auto;
 }
 
+/* Form fields */
 input, textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 1rem;
 }
 
 textarea {
@@ -222,6 +203,7 @@ textarea {
   height: 120px;
 }
 
+/* Hamburger menu (mobile only) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -229,31 +211,30 @@ textarea {
   cursor: pointer;
   padding: 8px;
   border-radius: 6px;
-  transition: background 0.2s ease;
 }
 
 .hamburger:hover {
-  background: rgba(43, 76, 126, 0.08); /* Slight hover highlight */
+  background: rgba(43,76,126,0.08);
 }
 
 .hamburger span {
-  display: block;
   width: 28px;
   height: 3px;
-  background: #2b4c7e; /* same color as your nav links */
+  background: #2b4c7e;
   border-radius: 3px;
 }
 
+/* Footer */
 footer {
-  background-color: #2b4c7e;
+  background: #2b4c7e;
   color: white;
   text-align: center;
-  padding: 25px 10px;
-  font-size: 0.95rem;
+  padding: 25px;
 }
 
+/* Team section */
 #team {
-  background-color: #f0f4f8;
+  background: #f0f4f8;
   text-align: center;
 }
 
@@ -264,11 +245,9 @@ footer {
 }
 
 .team-box {
-  background-color: white;
-  text-align: center;
+  background: white;
   padding: 30px;
   border-radius: 10px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -276,59 +255,108 @@ footer {
 
 .team-box img {
   width: 100%;
-  height: 100%;       
-  object-fit: cover;   
-  display: block;
+  object-fit: cover;
 }
-
 
 .team-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
+/* DROPDOWN CONTAINER */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Make the Features link look like others */
+.drop-btn {
+  margin: 0 15px;
+  color: #2b4c7e;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.drop-btn:hover {
+  color: #6da5c0;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  padding: 10px 0;
+  z-index: 99999;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #2b4c7e;
+  font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+  background: #f0f4f8;
+}
+
+/* Mobile layout */
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: white;
   }
 
   .nav-btn {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
     background: white;
     position: absolute;
     top: 65px;
     right: 20px;
     padding: 15px 18px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     width: 200px;
-    animation: fadeIn 0.2s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   }
 
   .nav-btn.active {
-    display: flex;
+    display: flex; /* show on toggle */
   }
 
   .nav-btn a {
     margin: 8px 0;
-    font-size: 1.2rem;
-    padding: 4px 0;
   }
 
   .icons {
     max-width: 90px;
   }
 
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 10px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block; /* always open on tap */
+  }
 }
