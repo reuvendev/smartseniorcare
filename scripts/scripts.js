@@ -8,3 +8,10 @@ const navMenu = document.getElementById('navMenu');
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
+
+// Close menu when any link inside nav is clicked
+document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});
