@@ -20,7 +20,7 @@ body {
   align-items: center;
   background: #fff;
   padding: 16px 28px;
-  position: sticky; /* stays on top when scrolling */
+  position: sticky;
   top: 0;
   z-index: 9999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -29,7 +29,6 @@ body {
 .navlogo {
   height: 52px;
 }
-
 
 /* Nav links */
 .nav-btn a {
@@ -100,74 +99,54 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* Features section */
+/* Features section container */
 #features {
   background: #f0f4f8;
   text-align: center;
 }
 
-/* Responsive grid */
-.feature-grid {
+/* ========== NEW FEATURE FULL-WIDTH SECTIONS ========== */
+/* Features grid */
+.features-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
-/* Feature card */
-.feature-box {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  transition: 0.3s;
+/* Feature cards */
+.feature-section {
+  height: 300px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
 }
 
-.feature-box img {
-  width: 100%;
-  object-fit: cover;
+/* Dark overlay */
+.feature-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
 }
 
-.feature-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+/* Title text */
+.feature-section h3 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
-/* UI preview images */
-.ui-img {
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-/* Feature icons */
-.icons {
-  max-width: 120px;
-  margin: 0 auto 10px;
-}
-
-h3 {
-  color: #2b4c7e;
-  margin-bottom: 10px;
-}
-
-/* Feature description text */
-.feature-box p {
-  max-width: 250px;
-  margin: 10px auto;
-  color: #444;
-}
-
-/* Benefits section */
-.benefits-section ul {
-  list-style: none;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.benefits-section li {
-  background: #fff;
-  padding: 18px 22px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
 
 /* About section */
 #about {
@@ -269,7 +248,7 @@ footer {
   display: inline-block;
 }
 
-/* Make the Features link look like others */
+/* Features link */
 .drop-btn {
   margin: 0 15px;
   color: #2b4c7e;
@@ -297,7 +276,7 @@ footer {
   z-index: 99999;
 }
 
-/* Show dropdown on hover (desktop) */
+/* Show dropdown (desktop hover) */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -335,15 +314,11 @@ footer {
   }
 
   .nav-btn.active {
-    display: flex; /* show on toggle */
+    display: flex;
   }
 
   .nav-btn a {
     margin: 8px 0;
-  }
-
-  .icons {
-    max-width: 90px;
   }
 
   .dropdown {
@@ -357,6 +332,10 @@ footer {
   }
 
   .dropdown:hover .dropdown-menu {
-    display: block; /* always open on tap */
+    display: block; /* for tap */
+  }
+
+  .icons {
+    max-width: 90px;
   }
 }
